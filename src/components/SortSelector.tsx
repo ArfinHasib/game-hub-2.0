@@ -1,10 +1,4 @@
-import {
-  Button,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-} from '@chakra-ui/react';
+import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import { BsChevronDown } from 'react-icons/bs';
 import useGameQueryStore from '../store';
 
@@ -19,9 +13,7 @@ const SortSelector = () => {
   ];
 
   const setSortOrder = useGameQueryStore((s) => s.setSortOrder);
-  const sortOrder = useGameQueryStore(
-    (s) => s.gameQuery.sortOrder
-  );
+  const sortOrder = useGameQueryStore((s) => s.gameQuery.sortOrder);
   const currentSortOrder = sortOrders.find(
     (order) => order.value === sortOrder
   );
